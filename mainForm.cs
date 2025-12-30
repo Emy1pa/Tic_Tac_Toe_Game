@@ -12,12 +12,6 @@ namespace Tic_Tac_Toe_Game
 {
     public partial class mainForm : Form
     {
-
-        public mainForm()
-        {
-            InitializeComponent();
-        }
-
         stGameStatus GameStatus;
 
         enPlayer PlayerTurn = enPlayer.Player1;
@@ -31,6 +25,11 @@ namespace Tic_Tac_Toe_Game
             public enWinner Winner;
             public bool GameOver;
             public short PlayCount;
+        }
+
+        public mainForm()
+        {
+            InitializeComponent();
         }
 
         private void mainForm_Load(object sender, EventArgs e)
@@ -83,7 +82,7 @@ namespace Tic_Tac_Toe_Game
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            this.Text = "X: " + e.X + " Y: " + e.Y;
+            //this.Text = "X: " + e.X + " Y: " + e.Y;
         }
 
         void EndGame()
@@ -181,7 +180,7 @@ namespace Tic_Tac_Toe_Game
                 MessageBox.Show("Invalid Move! Try Again.", "Wrong Choice", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if(GameStatus.PlayCount == 9 )
+            if(GameStatus.PlayCount == 9 && !GameStatus.GameOver)
             {
                 GameStatus.GameOver = true;
                 GameStatus.Winner = enWinner.Draw;
