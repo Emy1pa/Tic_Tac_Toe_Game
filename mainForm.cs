@@ -153,7 +153,7 @@ namespace Tic_Tac_Toe_Game
         }
 
         public void ChangeImage(Button btn) {
-            if(btn.Tag.ToString() == "?")
+            if(btn.Tag.ToString() == "?" && ! GameStatus.GameOver)
             {
                 switch (PlayerTurn)
                 {
