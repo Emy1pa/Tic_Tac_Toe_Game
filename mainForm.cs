@@ -188,58 +188,12 @@ namespace Tic_Tac_Toe_Game
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
-            ChangeImage(button1);
+            ChangeImage((Button)sender);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ChangeImage(button2);
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            ChangeImage(button3);
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ChangeImage(button4);
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            ChangeImage(button5);
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            ChangeImage(button6);
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            ChangeImage(button7);
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            ChangeImage(button8);
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            ChangeImage(button9);
-
-        }
+        
 
         private void ResetButtons(Button btn) {
             btn.Image = Properties.Resources.question_mark_96;
@@ -267,6 +221,5 @@ namespace Tic_Tac_Toe_Game
             lblCheckWinner.Text = "In Progress";
         }
 
-       
     }
 }
